@@ -1,7 +1,7 @@
 import React from 'react';
 import PartItem from './PartItem';
 
-function PartList({keyWord}) {
+function PartLixt({keyWord}) {
     let list = [];
     switch(keyWord) {
         case "body" : 
@@ -57,4 +57,4 @@ function PartList({keyWord}) {
     )
 }
 
-export default PartList
+export default PartLixt
