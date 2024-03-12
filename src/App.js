@@ -22,11 +22,11 @@ function App() {
     <br/>
     <div><PartLixt keyWord="neckwear"/></div>
     <br/>
-    {/* <div><PartLixt keyWord="cloth1"/></div>
+    <div><PartLixt keyWord="cloth1"/></div>
     <br/>
     <div><PartLixt keyWord="cloth2"/></div>
     <br/>
-    <div><PartLixt keyWord="cloth3"/></div> */}
+    <div><PartLixt keyWord="cloth3"/></div>
   </>
   )
 }

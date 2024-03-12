@@ -21,16 +21,16 @@ function PartLixt({keyWord}) {
             break;
         case "mouth" :
             for ( let i = 1; i < 25; i++ ) {
-                list.push(< PartItem imgUrl={`character/mouth/${i}.png`}/>);
+                list.push(< PartItem imgUrl={`character/mouths/${i}.png`}/>);
             }
             break;
         case "eyebrows" :
-            for ( let i = 1; i < 26; i++ ) {
+            for ( let i = 1; i < 16; i++ ) {
                 list.push(< PartItem imgUrl={`character/eyebrows/${i}.png`}/>);
             }
             break;
         case "glasses" :
-            for ( let i = 1; i < 19; i++ ) {
+            for ( let i = 1; i < 18; i++ ) {
                 list.push(< PartItem imgUrl={`character/accessories/glasses/${i}.png`}/>);
             }
             break;
@@ -47,6 +47,21 @@ function PartLixt({keyWord}) {
         case "neckwear" :
             for ( let i = 1; i < 19; i++ ) {
                 list.push(< PartItem imgUrl={`character/accessories/neckwear/${i}.png`}/>);
+            }
+            break;
+        case "cloth1" :
+            for ( let i = 1; i < 6; i++ ) {
+                list.push(< PartItem imgUrl={`character/clothes/layer_1/${i}.png`}/>);
+            }
+            break;
+        case "cloth2" :
+            for ( let i = 1; i < 6; i++ ) {
+                list.push(< PartItem imgUrl={`character/clothes/layer_2/${i}.png`}/>);
+            }
+            break;
+        case "cloth3" :
+            for ( let i = 1; i < 10; i++ ) {
+                list.push(< PartItem imgUrl={`character/clothes/layer_3/${i}.png`}/>);
             }
             break;
         default : 
