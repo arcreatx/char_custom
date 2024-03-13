@@ -42,11 +42,15 @@
 }
 
 .avatar {
-  border: 1px solid red;
-  /* position: relative; */
+  /* border: 1px solid red; */
+  width: 500px;
+  height: 500px;
+  position: relative;
 }
 
 .image {
+  width:250px;
+  height:250px;
   top: 0;
   left: 0;
   position: absolute;
