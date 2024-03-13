@@ -1,7 +1,7 @@
 import React from 'react';
 import PartItem from './PartItem';
 
-function PartLixt({keyWord}) {
+function PartList({keyWord}) {
     let list = [];
     switch(keyWord) {
         case "body" : 
@@ -12,6 +12,11 @@ function PartLixt({keyWord}) {
         case "eyes" :
             for ( let i = 1; i < 25; i++ ) {
                 list.push(< PartItem imgUrl={`character/eyes/${i}.png`}/>);
+            }
+            break;
+        case "facialhair" :
+            for ( let i = 1; i < 19; i++ ) {
+                list.push(< PartItem imgUrl={`character/facial_hair/${i}.png`}/>);
             }
             break;
         case "hair" :
@@ -72,4 +77,4 @@ function PartLixt({keyWord}) {
     )
 }
 
-export default PartLixt
+export default PartList
