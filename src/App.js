@@ -60,7 +60,9 @@ function App() {
   
 
   return (
+    
   <div className='main'>
+    <div className='title'>CHARACTER customization</div>
     <div className='avatar_wrap'>
       <Avatar 
         body={body} 
