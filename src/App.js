@@ -1,9 +1,43 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import PartList from "./PartList"
 import Avatar from "./Avatar"
 import './App.css'
 
 function App() {
+
+  const total = {
+    body: 17,
+    eyes: 17,
+    hair: 73,
+    mouth: 24,
+    eyebrows: 15,
+    hat: 28,
+    glasses: 17,
+    clothing1: 5,
+    clothing2: 5,
+    clothing3: 9,
+    facialhair: 17,
+    earrings:32,
+    hats:28,
+    neckwear:18,
+  };
+
+  const getRandom = () => {
+    setBody(Math.ceil(Math.random() * total.body));
+    setHair(Math.ceil(Math.random() * total.hair));
+    setEyes(Math.ceil(Math.random() * total.eyes));
+    setFacialHair(Math.ceil(Math.random() * total.facialhair));
+    setMouth(Math.ceil(Math.random() * total.mouth));
+    setEyebrows(Math.ceil(Math.random() * total.eyebrows));
+    setGlass(Math.ceil(Math.random() * total.glasses));
+    setEarring(Math.ceil(Math.random() * total.earrings));
+    setHat(Math.ceil(Math.random() * total.hats));
+    setNeckwear(Math.ceil(Math.random() * total.neckwear));
+    setCloth1(Math.ceil(Math.random() * total.clothing1));
+    setCloth2(Math.ceil(Math.random() * total.clothing2));
+    setCloth3(Math.ceil(Math.random() * total.clothing3));
+  }
+
   const [body, setBody] = useState(1)
   const [hair, setHair] = useState(1)
   const [eyes, setEyes] = useState(1)
@@ -18,10 +52,12 @@ function App() {
   const [cloth2, setCloth2] = useState(1)
   const [cloth3, setCloth3] = useState(1)
   
-
-  const handleClick = (i) => {
-    return i;
-  };
+  useEffect(() => {
+    getRandom()
+  } 
+  // eslint-disable-next-line
+  , [])
+  
 
   return (
   <div className='main'>
@@ -41,6 +77,7 @@ function App() {
         cloth2={cloth2} 
         cloth3={cloth3}
       />
+    <button onClick={getRandom}>Random</button>
     </div>
     <div className="partlist">
       <div><PartList setBody={setBody} keyWord="body"/></div>

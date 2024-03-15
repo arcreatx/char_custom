@@ -15,7 +15,7 @@ function PartList({keyWord, setBody, setEyes, setFacialHair, setHair, setMouth, 
             }
             break;
         case "facialhair" :
-            for ( let i = 1; i < 19; i++ ) {
+            for ( let i = 1; i < 18; i++ ) {
                 list.push(<button onClick={()=>setFacialHair(i)}>< PartItem imgUrl={`character/facial_hair/${i}.png`}/></button>);
             }
             break;
