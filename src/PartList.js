@@ -1,79 +1,79 @@
 import React from 'react';
 import PartItem from './PartItem';
 
-function PartList({keyWord, setBody, setEyes, setFacialHair, setHair, setMouth, setEyebrows, setGlass, setHat, setEarring, setNeckwear, setCloth1, setCloth2, setCloth3}) {
+function PartList({keyWord, handleClick}) {
     let list = [];
     switch(keyWord) {
         case "body" : 
             for ( let i = 1; i< 18; i++ ) {
-                list.push(<button onClick={()=>setBody(i)}>< PartItem imgUrl={`character/body/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/body/${i}.png`}/>);
             }
             break;
         case "eyes" :
             for ( let i = 1; i < 25; i++ ) {
-                list.push(<button onClick={()=>setEyes(i)}>< PartItem imgUrl={`character/eyes/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/eyes/${i}.png`}/>);
             }
             break;
         case "facialhair" :
             for ( let i = 1; i < 18; i++ ) {
-                list.push(<button onClick={()=>setFacialHair(i)}>< PartItem imgUrl={`character/facial_hair/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/facial_hair/${i}.png`}/>);
             }
             break;
         case "hair" :
             for ( let i = 1; i < 74; i++ ) {
-                list.push(<button onClick={()=>setHair(i)}>< PartItem imgUrl={`character/hair/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/hair/${i}.png`}/>);
             }
             break;
         case "mouth" :
             for ( let i = 1; i < 25; i++ ) {
-                list.push(<button onClick={()=>setMouth(i)}>< PartItem imgUrl={`character/mouths/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/mouths/${i}.png`}/>);
             }
             break;
         case "eyebrows" :
             for ( let i = 1; i < 16; i++ ) {
-                list.push(<button onClick={()=>setEyebrows(i)}>< PartItem imgUrl={`character/eyebrows/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/eyebrows/${i}.png`}/>);
             }
             break;
         case "glasses" :
             for ( let i = 1; i < 18; i++ ) {
-                list.push(<button onClick={()=>setGlass(i)}>< PartItem imgUrl={`character/accessories/glasses/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/accessories/glasses/${i}.png`}/>);
             }
             break;
         case "earrings" :
             for ( let i = 1; i < 33; i++ ) {
-                list.push(<button onClick={()=>setEarring(i)}>< PartItem imgUrl={`character/accessories/earrings/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)}imgUrl={`character/accessories/earrings/${i}.png`}/>);
             }
             break;
         case "hats" :
             for ( let i = 1; i < 29; i++ ) {
-                list.push(<button onClick={()=>setHat(i)}>< PartItem imgUrl={`character/accessories/hats/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/accessories/hats/${i}.png`}/>);
             }
             break;
         case "neckwear" :
             for ( let i = 1; i < 19; i++ ) {
-                list.push(<button onClick={()=>setNeckwear(i)}>< PartItem imgUrl={`character/accessories/neckwear/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/accessories/neckwear/${i}.png`}/>);
             }
             break;
         case "cloth1" :
             for ( let i = 1; i < 6; i++ ) {
-                list.push(<button onClick={()=>setCloth1(i)}>< PartItem imgUrl={`character/clothes/layer_1/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/clothes/layer_1/${i}.png`}/>);
             }
             break;
         case "cloth2" :
             for ( let i = 1; i < 6; i++ ) {
-                list.push(<button onClick={()=>setCloth2(i)}>< PartItem imgUrl={`character/clothes/layer_2/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/clothes/layer_2/${i}.png`}/>);
             }
             break;
         case "cloth3" :
             for ( let i = 1; i < 10; i++ ) {
-                list.push(<button onClick={()=>setCloth3(i)}>< PartItem imgUrl={`character/clothes/layer_3/${i}.png`}/></button>);
+                list.push(< PartItem handleClick={()=>handleClick(i)} imgUrl={`character/clothes/layer_3/${i}.png`}/>);
             }
             break;
         default : 
             break;
     };
     return (
-        <div>{list}</div>
+        <div className='part'>{list}</div>
     )
 }
 

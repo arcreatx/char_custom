@@ -4,9 +4,9 @@ import React from 'react';
 function Avatar({body, eyes, hair, mouth, facialhair, eyebrows, earring,glass,hat,neckwear,cloth1,cloth2,cloth3}) {
     return (
         <div className="avatar">
-            <img className="image" src={`character/body/${body}.png`} alt="" style={{"z-index":0}}/>
-            <img className="image" src={`character/clothes/layer_1/${cloth1}.png`} alt="" style={{"z-index":3}}/>
-            <img className="image" src={`character/clothes/layer_2/${cloth2}.png`} alt="" style={{"z-index":2}}/>
+            <img className="image" src={`character/body/${body}.png`} alt="body" style={{"z-index":0}}/>
+            <img className="image" src={`character/clothes/layer_1/${cloth1}.png`} alt="cloth1" style={{"z-index":3}}/>
+            <img className="image" src={`character/clothes/layer_2/${cloth2}.png`} alt="cloth2" style={{"z-index":2}}/>
             <img className="image" src={`character/clothes/layer_3/${cloth3}.png`} alt="" style={{"z-index":1}}/>
             <img className="image" src={`character/eyebrows/${eyebrows}.png`} alt="" style={{"z-index":1}}/>
             <img className="image" src={`character/eyes/${eyes}.png`} alt="" style={{"z-index":1}}/>

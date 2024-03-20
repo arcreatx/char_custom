@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -37,15 +39,47 @@
   }
 }
 
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .main {
   display:flex;
+
+}
+
+.avatar_wrap {
+  padding:10px;
+  display: inline-block;
+  /* border: 1px solid black; */
+  position: sticky;
+  top: 10%;
+  height:500px;
+  
 }
 
 .avatar {
-  /* border: 1px solid red; */
+  /* border: 1px solid greenyellow; */
   width: 250px;
-  height: 260px;
+  height: 250px;
   position: relative;
+  padding: 1rem 0 1rem 0;
+  background:white;
+  box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13);
 }
 
 .image {
@@ -56,30 +90,13 @@
   position: absolute;
 }
 
-.avatar_wrap {
-  padding:10px;
-  display: inline-block;
-  border: 0px solid black;
-  position: sticky;
-  top: 10%;
-  width: 500px;
-  height: 500px;
-}
+
 
 .title {
   display:block;
-  border: 1px solid black;
   position: relative;
   width: 100%;
-  height: 300px;
-  font-size: 120px;
-  text-transform: uppercase;
-  font-family: 'Gambetta', serif;
-  letter-spacing: -3px;
-  transition: 700ms ease;
-  font-variation-settings: "wght" 311;
-  margin-bottom: 0.8rem;
-  color: black;
+  height: 20rem;
   outline: none;
   text-align: center;
 }
@@ -89,12 +106,153 @@
   letter-spacing: 1px;
 }
 
+
+.button {
+  display:flex;
+  justify-content:center;
+  margin-top:1rem;
+
+/* CSS */
+.button-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: white;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: black;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-12:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+}
+
+.partname {
+  text-align: center;
+  color: white;
+  font-size:2rem;
+  text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+  padding:1rem;
+}
+
+.part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap:wrap;
+  margin-left:1rem;
+  /* box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13); */
+} 
+.title-bg {
+  background: white;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .main {
-    display:block;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid salmon; */
   }
   .avatar_wrap {
+    /* border:0px solid yellow; */
     position: relative;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .part {
+    /* border:1px solid brown; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:0;
+  }
+
+  .avatar {
+    /* border: 2px solid red; */
+  }
+
+  .title {
+    display:block;
+    position: relative;
+    /* width: 100px; */
+    height: 200px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: red;
+    outline: none;
+    text-align: center;
+    /* border:1px solid green; */
   }
 }
+
